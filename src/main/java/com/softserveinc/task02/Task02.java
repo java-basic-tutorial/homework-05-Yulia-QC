@@ -79,7 +79,7 @@ public class Task02 {
     static long ex03() {
         // TODO: count how many employees are male aged 18 to 60 and women aged 18 to 55
         return EMPLOYEES.stream()
-                .filter(employee -> employee.getAge() > 18)
+                .filter(employee -> employee.getAge() >= 18)
                 .filter(employee -> {
                     switch (employee.getGender()){
                         case MAN: return employee.getAge() <= 60;
